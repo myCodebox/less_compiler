@@ -1,0 +1,21 @@
+#less_compiler_demo {
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	padding: 1.000em;
+	background-color: #333;
+	color: #e34;
+	color: #78C936;
+	font-weight: bold;
+	text-align: center;
+	z-index:1000;
+	border: 1px solid #78C936;
+}
+#less_compiler_demo pre {
+	padding: 5px;
+	margin: 5px 0 0 0;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+}

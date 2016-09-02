@@ -1,0 +1,20 @@
+# Alle hier gesetzten Werte können über $addon->getProperty($key) abgefragt werden
+
+package:        less_compiler
+version:        '0.3.5'
+author:         Herbert Leier
+supportpage:    https://www.codebox.at/
+
+page:
+    title:  'LESS Compiler'
+    perm:   less_compiler[]
+    icon:   rex-icon fa-compress
+    subpages:
+        einstellungen:  { pjax: true, title: 'translate:less_compiler_setting', perm: less_compiler[] }
+        editor:         { pjax: true, title: 'translate:less_compiler_editor', perm: less_compiler[] }
+        info:
+            title: 'translate:info'
+            subpages:
+                info:       { title: 'translate:info'}
+                changelog:  { title: 'translate:changelog'}
+                license:    { title: 'translate:license'}

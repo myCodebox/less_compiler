@@ -1,0 +1,20 @@
+
+
+less_compiler_title 			= LESS Compiler for Redaxo 5
+less_compiler_setting           = Settings
+less_compiler_aktiv             = LESS Compiler active
+less_compiler_erklaerung_title  = Summary
+less_compiler_save              = Save changes
+
+less_compiler_editor			= LESS edit
+less_compiler_formatter 		= Output Formatting
+less_compiler_path_css 			= CSS Path
+less_compiler_path_less 		= LESS Path
+less_compiler_demo 				= Demo Overlay activate
+
+info 		= Info
+license 	= License
+help 		= Help
+changelog 	= Changes
+
+perm_general_less_compiler[] = LESS Compiler
