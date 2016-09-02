@@ -86,13 +86,13 @@
 			rex_extension::register('OUTPUT_FILTER', function(rex_extension_point $ep) {
 				$content = $ep->getSubject();
 				$insert = '<div id="less_compiler_demo">
-							LESS Compiler demo active<br />
+							LESS Compiler demo works!<br />
 							<pre>
-								<span>LESS Path: '.self::$dir_less.'</span>
+								<span>LESS Path: '.self::$dir_less.'</span><br />
 								<span> CSS Path: '.self::$dir_css.'</span>
 							</pre>
 						</div>'."\n";
-
+				$insert = preg_replace('/\s+/S', " ", $insert);
 				$search = '</body>';
 				$content = str_replace($search, $insert.$search, $content);
 				$ep->setSubject($content);
