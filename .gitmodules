@@ -1,3 +1,3 @@
 [submodule "lessphp"]
-				path = /vendor/lessphp
-				url = https://github.com/leafo/lessphp.git
+path = vendor/lessphp
+url = https://github.com/leafo/lessphp.git
