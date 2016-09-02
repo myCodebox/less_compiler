@@ -36,7 +36,7 @@ More info can be found here:
 ### ToDo List
 
 - ~~CodeMirrow on save set the `doc.setCursor(pos: {line, ch}|number, ?ch: number, ?options: object)` ([stackoverflow](https://mikethedj4.github.io/kodeWeave/editor/#b9a99b76536392cb5ec5004bc37b8fcc), [code](https://mikethedj4.github.io/kodeWeave/editor/#b9a99b76536392cb5ec5004bc37b8fcc))~~
-- Better file structur for ``boot.php``
+- Better file structure for ``boot.php``
 - Text field for **back** and **front** color, save them as LESS var, with colorpicker
 - Add multi LESS file to compile
 - Add a file history with a go back to file[n] option
