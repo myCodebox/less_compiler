@@ -12,7 +12,6 @@
 		rex_file::put($dir_less.'/design.less', $content);
 		$file_less = rex_file::get($dir_less.'/design.less');
 	}
-
 ?>
 
 
@@ -25,7 +24,7 @@
 
 <form id="less_compiler_edit_form" name="less_compiler_edit_form" action="<?php echo rex_url::currentBackendPage(); ?>" method="post">
 	<textarea  id="less_compiler_edit" name="less_compiler_edit" style="width: 100%; height: 400px;"><?php echo $file_less; ?></textarea><br />
-	<p class="text-muted pull-left"> 
+	<p class="text-muted pull-left">
 		<kbd>ctrl + S</kbd> Save
 		<kbd>ctrl + Z</kbd> Undo
 		<kbd><kbd>ctrl + Y</kbd></kbd> Redo

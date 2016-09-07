@@ -1,5 +1,7 @@
 ### 02.09.2016 Version 0.3.6 ###
 - Is the addon "be_style" with the plugin 'customizer' installed
+- Fix a small bug in the backend header files
+- add a test page for a url checker
 
 ### 02.09.2016 Version 0.3.5 ###
 - Clearup the code

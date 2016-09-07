@@ -1,5 +1,12 @@
 $(document).on('rex:ready', function (event, container) {
-	
+
+	if(typeof cur_line !== undefined){
+		var cur_line = 0;
+	}
+	if(typeof cur_ch !== undefined){
+		var cur_ch = 0;
+	}
+
 	include_hidden_imputs = function() {
 		var input_fields = {
 			'less_compiler_submit': '1',
@@ -50,14 +57,14 @@ $(document).on('rex:ready', function (event, container) {
 			}
 		}
 	});
-	
+
 	editor.focus();
 	editor.setOption("fullScreen", win_fullscreen);
 	editor.setCursor({line: cur_line, ch: cur_ch});
 	editor.on('cursorActivity', function(cm){
 		var cursor = cm.getCursor();
 		$('#less_compiler_line').val(cursor.line);
-		$('#less_compiler_ch').val(cursor.ch);	
+		$('#less_compiler_ch').val(cursor.ch);
 	});
 
 	save_on_key = function (cm) {
