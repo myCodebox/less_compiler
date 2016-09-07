@@ -41,5 +41,6 @@ More info can be found here:
 - Add multi LESS file to compile
 - Add a file history with a go back to file[n] option
 - Add CSS and LESS path autocomplete (http://stackoverflow.com/questions/14144970/jquery-autocomplete-path-bash-style)
-- Is the addon "be_style" with the plugin 'customizer' installed and is 'CodeMirror' active
+- Is 'CodeMirror' active
+- ~~Is the addon "be_style" with the plugin 'customizer' installed~~ and is 'CodeMirror' active
 - ~~Add save on `CTRL+S` to the LESS editor (http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery)~~

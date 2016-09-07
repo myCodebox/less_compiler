@@ -1,3 +1,6 @@
+### 02.09.2016 Version 0.3.6 ###
+- Is the addon "be_style" with the plugin 'customizer' installed
+
 ### 02.09.2016 Version 0.3.5 ###
 - Clearup the code
 - Some small bugfixes

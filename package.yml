@@ -1,7 +1,7 @@
 # Alle hier gesetzten Werte können über $addon->getProperty($key) abgefragt werden
 
 package:        less_compiler
-version:        '0.3.5'
+version:        '0.3.6'
 author:         Herbert Leier
 supportpage:    https://www.codebox.at/
 
@@ -18,3 +18,9 @@ page:
                 info:       { title: 'translate:info'}
                 changelog:  { title: 'translate:changelog'}
                 license:    { title: 'translate:license'}
+
+requires:
+    redaxo: '>= 5.0.0'
+    packages:
+        be_style: '>= 2.1.1'
+        be_style/customizer: '>= 2.1.1'
