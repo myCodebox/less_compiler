@@ -46,22 +46,3 @@
 	echo '<pre>';
 	print_r( url_checker::getIds() );
 	echo '</pre>';
-
-
-
-
-
-
-	/*
-	$allLinks = [];
-	foreach($allIds AS $id) {
-		$art = new rex_article_content($id);
-		$article = $art->getArticle();
-		collect::allUrls($article);
-		$allLinks[] = collect::getAllUrls();
-	}
-
-	echo '<pre>';
-	print_r( $allLinks );
-	echo '</pre>';
-	*/
