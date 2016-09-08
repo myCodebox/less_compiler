@@ -23,10 +23,6 @@
 			foreach(self::$ids AS $id) {
 				$art = new rex_article_content($id);
 				$article = $art->getArticle();
-				//self::$links[] = [
-				//	'id' => $id,
-				//	'links' => self::parseArtickle($article),
-				//];
 				self::parseArtickle($article, $id);
 			}
 			return false;
