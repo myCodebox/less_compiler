@@ -1,3 +1,6 @@
+### 22.09.2016 Version 0.3.7 ###
+- Is "less" class in folder
+
 ### 02.09.2016 Version 0.3.6 ###
 - Is the addon "be_style" with the plugin 'customizer' installed
 - Fix a small bug in the backend header files

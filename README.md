@@ -42,6 +42,7 @@ More info can be found here:
 - Add a file history with a go back to file[n] option
 - Add CSS and LESS path autocomplete (http://stackoverflow.com/questions/14144970/jquery-autocomplete-path-bash-style)
 - Is 'CodeMirror' active
-- Is LESS in vendor folder testing
+- ~~Is LESS in vendor folder testing~~
+- working on a better vendor folder testing
 - ~~Is the addon "be_style" with the plugin 'customizer' installed~~ and is 'CodeMirror' active
 - ~~Add save on `CTRL+S` to the LESS editor (http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery)~~
