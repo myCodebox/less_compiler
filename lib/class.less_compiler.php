@@ -37,21 +37,26 @@
 
 
 		public static function less2css() {
-			include_once(rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php'));
+			//include_once(rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php'));
+			
+			$file = rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php');
+			
+			if (file_exists($file)) {
+				include_once(rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php'));
 
-			if( self::$demo == '1' ) self::less_output_demo();
-
-			$less = new lessc;
-			if( self::$formatter != '' ) $less->setFormatter(self::$formatter);
-			try {
-				$less->checkedCompile(self::$dir_less.'/design.less', self::$dir_css.'/design.min.css');
-				self::less_output_filter();
+				if( self::$demo == '1' ) self::less_output_demo();
+	
+				$less = new lessc;
+				if( self::$formatter != '' ) $less->setFormatter(self::$formatter);
+				try {
+					$less->checkedCompile(self::$dir_less.'/design.less', self::$dir_css.'/design.min.css');
+					self::less_output_filter();
+				}
+				catch (exception $e) {
+					echo "[LESS Compiler] fatal error: " . $e->getMessage();
+					die();
+				}
 			}
-			catch (exception $e) {
-				echo "[LESS Compiler] fatal error: " . $e->getMessage();
-				die();
-			}
-
 		}
 
 

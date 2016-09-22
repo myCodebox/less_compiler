@@ -25,7 +25,10 @@
 			less_compiler::less2css();
 		}
 	} else {
-		less_compiler::less_page_header(rex_package::getName());
+		$file = rex_path::addon($this->getName(), 'vendor/lessphp/lessc.inc.php');			
+		if (file_exists($file)) {
+			less_compiler::less_page_header(rex_package::getName());
+		}
 	}
 
 	if(rex_finder::factory($dir_less)->count() == 0) {

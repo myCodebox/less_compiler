@@ -12,7 +12,7 @@ page:
     subpages:
         einstellungen:  { pjax: true, title: 'translate:less_compiler_setting', perm: less_compiler[] }
         editor:         { pjax: true, title: 'translate:less_compiler_editor', perm: less_compiler[] }
-        url_checker:    { pjax: false, title: 'URL Checker', perm: less_compiler[] }
+        #url_checker:    { pjax: false, title: 'URL Checker', perm: less_compiler[] }
         info:
             title: 'translate:info'
             subpages:
