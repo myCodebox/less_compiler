@@ -38,14 +38,14 @@
 
 		public static function less2css() {
 			//include_once(rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php'));
-			
+
 			$file = rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php');
-			
+
 			if (file_exists($file)) {
 				include_once(rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php'));
 
 				if( self::$demo == '1' ) self::less_output_demo();
-	
+
 				$less = new lessc;
 				if( self::$formatter != '' ) $less->setFormatter(self::$formatter);
 				try {
@@ -65,7 +65,7 @@
 			rex_extension::register('OUTPUT_FILTER', function(rex_extension_point $ep) {
 				$content = $ep->getSubject();
 				$insert = '<!-- Add CSS from the LESS Comiler -->'."\n";
-				$insert .= '<link href="'.self::$dir_css.'/design.min.css" rel="stylesheet">';
+				$insert .= '<link href="'.rex_url::base(self::$dir_css.'/design.min.css').'" rel="stylesheet">';
 				if( self::$demo == '1' ) {
 					$insert .= '<link href="'.rex_url::addonAssets(self::$package, 'css/demo_less_compiler.css').'" rel="stylesheet">';
 				}
