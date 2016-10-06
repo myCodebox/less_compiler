@@ -6,6 +6,7 @@ author:         Herbert Leier
 supportpage:    https://www.codebox.at/
 
 page:
+    block:  codebox
     title:  'LESS Compiler'
     perm:   less_compiler[]
     icon:   rex-icon fa-compress
