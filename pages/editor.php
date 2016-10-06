@@ -8,12 +8,11 @@
 
 	if (rex_post('less_compiler_submit', 'boolean')) {
 		$content = rex_post('less_compiler_edit', 'string');
-		//echo '<pre>'; print_r($content); echo '</pre>';
 		rex_file::put($dir_less.'/design.less', $content);
 		$file_less = rex_file::get($dir_less.'/design.less');
 	}
-?>
 
+?>
 
 <script>
 	var win_fullscreen 	= <?php echo rex_post('less_compiler_fullscreen', 'string', 'false'); ?>;

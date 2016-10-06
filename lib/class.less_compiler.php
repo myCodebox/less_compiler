@@ -77,18 +77,6 @@
 		}
 
 
-
-		public static function less_page_header($package) {
-			if( rex_get('page') == $package.'/editor' ) {
-				rex_extension::register('PAGE_HEADER', function(rex_extension_point $ep) {
-					$content = $ep->getSubject();
-					$content = '<script src="'.rex_url::addonAssets($ep->getParam('package'), 'js/main_less_compiler.js').'" type="text/javascript"></script>';
-					$ep->setSubject($content);
-				}, 'NORMAL', array('package' => $package));
-			}
-		}
-
-
 		private static function less_output_demo() {
 			rex_extension::register('OUTPUT_FILTER', function(rex_extension_point $ep) {
 				$content = $ep->getSubject();

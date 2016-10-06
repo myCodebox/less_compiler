@@ -24,11 +24,12 @@
 			);
 			less_compiler::less2css();
 		}
+
 	} else {
-		$file = rex_path::addon($this->getName(), 'vendor/lessphp/lessc.inc.php');
-		if (file_exists($file)) {
-			less_compiler::less_page_header(rex_package::getName());
+		if( rex_get('page') == rex_package::getName().'/editor' ) {
+			rex_view::addJsFile( $this->getAssetsUrl('js/main_less_compiler.js') );
 		}
+		rex_view::addCSSFile( $this->getAssetsUrl('css/less_compiler.css') );
 	}
 
 	if(rex_finder::factory(rex_url::base($dir_less))->count() == 0) {
