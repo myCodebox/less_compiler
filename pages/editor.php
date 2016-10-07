@@ -23,13 +23,15 @@
 
 <form id="less_compiler_edit_form" name="less_compiler_edit_form" action="<?php echo rex_url::currentBackendPage(); ?>" method="post">
 	<textarea  id="less_compiler_edit" name="less_compiler_edit" style="width: 100%; height: 400px;"><?php echo $file_less; ?></textarea><br />
-	<p class="text-muted pull-left">
-		<kbd>ctrl + S</kbd> Save
-		<kbd>ctrl + Z</kbd> Undo
-		<kbd><kbd>ctrl + Y</kbd></kbd> Redo
-		<kbd>F11</kbd> Fullscreen/Close
-		<kbd>Esc</kbd> Close fullscreen
-		| <a href="http://lesscss.org/" target="_blank">LESS Doc</a>
-	</p>
-	<button id="less_compiler_submit" name="less_compiler_submit" class="btn btn-save pull-right" type="submit" value="1" title="'.$less_save_btn.'"><?php echo $less_save_btn; ?></button>
+	<div id="info_save">
+		<p class="text-muted pull-left">
+			<kbd>ctrl + S</kbd> Save
+			<kbd>ctrl + Z</kbd> Undo
+			<kbd><kbd>ctrl + Y</kbd></kbd> Redo
+			<kbd>F11</kbd> Fullscreen/Close
+			<kbd>Esc</kbd> Close fullscreen
+			| <a href="http://lesscss.org/" target="_blank">LESS Doc</a>
+		</p>
+		<button id="less_compiler_submit" name="less_compiler_submit" class="btn btn-save pull-right" type="submit" value="1" title="'.$less_save_btn.'"><?php echo $less_save_btn; ?></button>
+	</div>
 </form>
