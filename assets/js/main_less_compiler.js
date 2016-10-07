@@ -46,17 +46,14 @@ $(document).on('rex:ready', function (event, container) {
 			"F11": function(cm) {
 				cm.setOption("fullScreen", !cm.getOption("fullScreen"));
 				$('#less_compiler_fullscreen').val(cm.getOption("fullScreen"));
-				//set_info_bar(cm);
 			},
 			"Esc": function(cm) {
 				if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
 				$('#less_compiler_fullscreen').val(false);
-				//set_info_bar(cm);
 			},
 			"Ctrl-S": function(cm) {
 				$('#less_compiler_fullscreen').val(cm.getOption("fullScreen"));
 				save_on_key(cm);
-				//set_info_bar(cm);
 			}
 		}
 	});
@@ -74,34 +71,5 @@ $(document).on('rex:ready', function (event, container) {
 		cm.save();
 		$('#less_compiler_submit').submit();
 	};
-
-	/*
-	set_info_bar = function(cm) {
-		if(cm.getOption("fullScreen")) {
-			container.find('#info_save').css({
-				'position': 'fixed',
-				'padding': '0.500em',
-				'background-color':'#333',
-				'top': 'auto',
-				'left': 0,
-				'bottom': 0,
-				'right': '18px',
-				'z-index': 2000,
-			});
-		}
-		if(!cm.getOption("fullScreen")) {
-			container.find('#info_save').css({
-				'position': 'relative',
-				'padding': 'auto',
-				'background-color':'transparent',
-				'top': 'auto',
-				'left': 'auto',
-				'bottom': 'auto',
-				'right': 'auto',
-				'z-index': 'auto',
-			});
-		}
-	};
-	*/
 
 });
