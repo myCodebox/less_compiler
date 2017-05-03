@@ -11,7 +11,8 @@
 		rex_file::put($dir_less.'/design.less', $content);
 		$file_less = rex_file::get($dir_less.'/design.less');
 	}
-
+	less_compiler::addLessFile($compiler_path_less.'/design.less');
+	less_compiler::combineLessFiles();
 ?>
 
 <script>

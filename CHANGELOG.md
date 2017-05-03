@@ -1,3 +1,7 @@
+### 04.05.2017 Version 0.4.0 ###
+- Add some fixes
+- Add new method: less_compiler::combineLessFiles()
+
 ### 22.09.2016 Version 0.3.7 ###
 - Is "less" class in folder
 

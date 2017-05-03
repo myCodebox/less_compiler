@@ -38,11 +38,11 @@ More info can be found here:
 - ~~CodeMirrow on save set the `doc.setCursor(pos: {line, ch}|number, ?ch: number, ?options: object)` ([stackoverflow](https://mikethedj4.github.io/kodeWeave/editor/#b9a99b76536392cb5ec5004bc37b8fcc), [code](https://mikethedj4.github.io/kodeWeave/editor/#b9a99b76536392cb5ec5004bc37b8fcc))~~
 - Better file structure for ``boot.php``
 - Text field for **back** and **front** color, save them as LESS var, with colorpicker
-- Add multi LESS file to compile
+- ~~Add multi LESS file to compile~~
 - Add a file history with a go back to file[n] option
 - Add CSS and LESS path autocomplete (http://stackoverflow.com/questions/14144970/jquery-autocomplete-path-bash-style)
 - Is 'CodeMirror' active
-- Better Redaxo integration 
+- Better Redaxo integration
 - ~~Is LESS in vendor folder testing~~
 - working on a better vendor folder testing
 - ~~Is the addon "be_style" with the plugin 'customizer' installed~~ and is 'CodeMirror' active

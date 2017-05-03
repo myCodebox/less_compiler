@@ -9,6 +9,43 @@
 		protected static $demo;
 
 
+		private static $lessFiles = [];
+
+
+		public static function addLessFile($file) {
+			if (isset(self::$lessFiles) && in_array($file, self::$lessFiles)) {
+				throw new rex_exception(sprintf('The LESS file "%s" is already added".', $file));
+			}
+			self::$lessFiles[] = $file;
+		}
+
+		public static function getLessFiles() {
+			return self::$lessFiles;
+		}
+
+		public static function combineLessFiles() {
+			$arr = self::getLessFiles();
+			if( count($arr) > 0 ) {
+				krsort($arr);
+
+				$content = '';
+				foreach ($arr as $key => $val) {
+					$file = (rex::isBackend()) ? rex_url::base($val): $val;
+					$content .= '// FILE: '.$val."\n";
+					$content .= rex_file::getOutput( $file );
+					$content .= "\n\n";
+				}
+
+				// echo '<pre>';
+				// print_r($arr);
+				// print_r($content);
+				// echo '</pre>';
+
+				rex_file::put(self::$dir_less.'/design_combine.less',$content);
+			}
+		}
+
+
 		public static function set_all($package, $dir_less, $dir_css, $formatter, $demo) {
 			self::$package 		= $package;
 			self::$dir_less 	= $dir_less;
@@ -37,7 +74,8 @@
 
 
 		public static function less2css() {
-			//include_once(rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php'));
+			self::addLessFile(self::$dir_less.'/design.less');
+			self::combineLessFiles();
 
 			$file = rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php');
 
@@ -49,7 +87,8 @@
 				$less = new lessc;
 				if( self::$formatter != '' ) $less->setFormatter(self::$formatter);
 				try {
-					$less->checkedCompile(self::$dir_less.'/design.less', self::$dir_css.'/design.min.css');
+					// $less->checkedCompile(self::$dir_less.'/design.less', self::$dir_css.'/design.min.css');
+					$less->checkedCompile(self::$dir_less.'/design_combine.less', self::$dir_css.'/design.min.css');
 					self::less_output_filter();
 				}
 				catch (exception $e) {
