@@ -30,10 +30,12 @@
 
 				$content = '';
 				foreach ($arr as $key => $val) {
-					$file = (rex::isBackend()) ? rex_url::base($val): $val;
-					$content .= '// FILE: '.$val."\n";
-					$content .= rex_file::getOutput( $file );
-					$content .= "\n\n";
+					if( rex_file::get(rex_url::base($val)) ) {
+						$file = (rex::isBackend()) ? rex_url::base($val): $val;
+						$content .= '// FILE: '.$val."\n";
+						$content .= rex_file::getOutput( $file );
+						$content .= "\n\n";
+					}
 				}
 
 				// echo '<pre>';
