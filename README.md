@@ -39,6 +39,7 @@ More info can be found here:
 - Better file structure for ``boot.php``
 - Text field for **back** and **front** color, save them as LESS var, with colorpicker
 - ~~Add multi LESS file to compile~~
+- Multi LESS - file exist check
 - Add a file history with a go back to file[n] option
 - Add CSS and LESS path autocomplete (http://stackoverflow.com/questions/14144970/jquery-autocomplete-path-bash-style)
 - Is 'CodeMirror' active
