@@ -9,6 +9,7 @@
 		protected static $demo;
 
 
+<<<<<<< HEAD
 		private static $lessFiles = [];
 
 
@@ -48,6 +49,8 @@
 		}
 
 
+=======
+>>>>>>> parent of 1a87673... Multi Less
 		public static function set_all($package, $dir_less, $dir_css, $formatter, $demo) {
 			self::$package 		= $package;
 			self::$dir_less 	= $dir_less;
@@ -76,8 +79,7 @@
 
 
 		public static function less2css() {
-			self::addLessFile(self::$dir_less.'/design.less');
-			self::combineLessFiles();
+			//include_once(rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php'));
 
 			$file = rex_path::addon(self::$package, 'vendor/lessphp/lessc.inc.php');
 
@@ -89,8 +91,7 @@
 				$less = new lessc;
 				if( self::$formatter != '' ) $less->setFormatter(self::$formatter);
 				try {
-					// $less->checkedCompile(self::$dir_less.'/design.less', self::$dir_css.'/design.min.css');
-					$less->checkedCompile(self::$dir_less.'/design_combine.less', self::$dir_css.'/design.min.css');
+					$less->checkedCompile(self::$dir_less.'/design.less', self::$dir_css.'/design.min.css');
 					self::less_output_filter();
 				}
 				catch (exception $e) {

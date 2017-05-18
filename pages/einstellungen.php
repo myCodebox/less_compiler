@@ -105,16 +105,7 @@
 		<code>./'.$less_path_less.'/</code><br/>
 		<code>./'.$less_path_css.'/</code><br/><br/>
 
-		<p>
-			Im <code>./'.$less_path_less.'/</code> Ordner werden die Dateien <code>design.less</code>
-			erwartet die dann zu <code>design.min.css</code> kompiliert und in den Ordner
-			<code>./'.$less_path_less.'/</code> gespeichert wird.<br />
-
-			<br />
-
-			Methode zum einhängen von einem LESS Files:<br />
-			<code>less_compiler::addLessFile(\'PATH/FILE.less\')</code>
-		</p>
+		<p>Im <code>./'.$less_path_less.'/</code> Ordner werden die Dateien <code>styles.less</code> erwartet die dann zu <code>design.min.css</code> kompiliert und in den Ordner <code>./'.$less_path_less.'/</code> gespeichert wird.</p>
 	';
 
 	$fragment = new rex_fragment();
