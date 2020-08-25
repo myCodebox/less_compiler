@@ -9,48 +9,6 @@
 		protected static $demo;
 
 
-<<<<<<< HEAD
-		private static $lessFiles = [];
-
-
-		public static function addLessFile($file) {
-			if (isset(self::$lessFiles) && in_array($file, self::$lessFiles)) {
-				throw new rex_exception(sprintf('The LESS file "%s" is already added".', $file));
-			}
-			self::$lessFiles[] = $file;
-		}
-
-		public static function getLessFiles() {
-			return self::$lessFiles;
-		}
-
-		public static function combineLessFiles() {
-			$arr = self::getLessFiles();
-			if( count($arr) > 0 ) {
-				krsort($arr);
-
-				$content = '';
-				foreach ($arr as $key => $val) {
-					if( rex_file::get(rex_url::base($val)) ) {
-						$file = (rex::isBackend()) ? rex_url::base($val): $val;
-						$content .= '// FILE: '.$val."\n";
-						$content .= rex_file::getOutput( $file );
-						$content .= "\n\n";
-					}
-				}
-
-				// echo '<pre>';
-				// print_r($arr);
-				// print_r($content);
-				// echo '</pre>';
-
-				rex_file::put(self::$dir_less.'/design_combine.less',$content);
-			}
-		}
-
-
-=======
->>>>>>> parent of 1a87673... Multi Less
 		public static function set_all($package, $dir_less, $dir_css, $formatter, $demo) {
 			self::$package 		= $package;
 			self::$dir_less 	= $dir_less;
